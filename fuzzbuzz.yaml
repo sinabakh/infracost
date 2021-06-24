@@ -1,0 +1,3 @@
+infracost:
+  language: go
+  version: "1.16"
