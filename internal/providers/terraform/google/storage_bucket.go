@@ -62,7 +62,9 @@ func getDSRegionResourceGroup(location, storageClass string) (string, string) {
 		switch location {
 		// Multi-region locations
 		case "ASIA", "EU", "US":
-			resourceGroup = "MultiRegionalStorage"
+			// Cause nil pointer exception.
+			var p *string = nil
+			resourceGroup = *p
 		// Dual-region locations
 		case "ASIA1", "EUR4", "NAM4":
 			// The pricing api treats a dual-region as a multi-region
